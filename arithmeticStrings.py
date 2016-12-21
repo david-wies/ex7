@@ -11,7 +11,8 @@ class Arith:
         return str(id)
 
     def cmd_add(self):
-        return """@SP
+        return """
+            @SP
             M=M-1
             A=M
             D=M
@@ -21,7 +22,8 @@ class Arith:
         """
 
     def cmd_sub(self):
-        return """@SP
+        return """
+            @SP
             M=M-1
             A=M
             D=M
@@ -31,7 +33,8 @@ class Arith:
           """
 
     def cmd_neg(self):
-        return """@0
+        return """
+              @0
               D=A
               @SP
               A=M-1
@@ -39,7 +42,8 @@ class Arith:
             """
 
     def cmd_and(self):
-        return """@SP
+        return """
+                @SP
                 M = M-1
                 A = M
                 D = M
@@ -52,7 +56,8 @@ class Arith:
               """
 
     def cmd_or(self):
-        return """@SP
+        return """
+            @SP
             M = M-1
             A = M
             D = M
@@ -87,7 +92,8 @@ class Arith:
             """.replace('%s', self.generateID())
 
     def cmd_gt(self):
-        return """@SP
+        return """
+            @SP
             M = M - 1
             A = M - 1
             D = M
@@ -132,7 +138,8 @@ class Arith:
             """.replace('%s', self.generateID())
 
     def cmd_lt(self):
-        return """@SP
+        return """
+            @SP
             M = M - 1
             A = M - 1
             D = M
@@ -177,7 +184,8 @@ class Arith:
             """.replace('%s', self.generateID())
 
     def not_cmd(self):
-        return """@SP
+        return """
+            @SP
             A = M-1
             M = !M
             """
